@@ -2,6 +2,8 @@
 
 SSRN indexes into Google Scholar; Zenodo does not. The paper is the PDF in this repository, uploaded once by Ilya from his SSRN account. Paste the fields below.
 
+**Submitted 2026-09-19: https://ssrn.com/abstract=7487459** (SSRN abstract 7487459; posts after SSRN review). A new revision is uploaded as a new version of the same abstract, never a new submission.
+
 - **Title:** The Gatewell Protocol for Origin Evidence, Version 1.0 (Public comment draft, Revision 3)
 - **Author:** Ilya Tsimerinov, Principal, Gatewell Group LLC (SSRN requires a person; the organisation goes in the affiliation)
 - **Date written:** 2026-09-17

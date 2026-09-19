@@ -18,6 +18,9 @@ identifiers:
   - type: url
     value: https://zenodo.org/records/22842570
     description: "Zenodo record"
+  - type: url
+    value: https://ssrn.com/abstract=7487459
+    description: "SSRN working paper"
 authors:
   - name: "Gatewell Group LLC"
     city: "Los Angeles"

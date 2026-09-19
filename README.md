@@ -26,7 +26,7 @@ The canonical edition, with clause anchors, is https://gatewellgroup.com/protoco
 
 Gatewell Group LLC. *The Gatewell Protocol for Origin Evidence, Version 1.0* (public comment draft, revision 3). 2026. https://gatewellgroup.com/protocol/v1.0/
 
-DOI of this release: https://doi.org/10.5281/zenodo.22842570. All versions: https://doi.org/10.5281/zenodo.22842569. Archived record: https://zenodo.org/records/22842570.
+DOI of this release: https://doi.org/10.5281/zenodo.22842570. All versions: https://doi.org/10.5281/zenodo.22842569. Archived record: https://zenodo.org/records/22842570. SSRN working paper: https://ssrn.com/abstract=7487459.
 
 ## How to comment
 
