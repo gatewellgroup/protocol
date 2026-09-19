@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you cite the Protocol, cite the published edition and, once it exists, the DOI of the release you used."
+type: dataset
+title: "The Gatewell Protocol for Origin Evidence, Version 1.0"
+version: "v1.0-draft-r3"
+date-released: "2026-09-17"
+url: "https://gatewellgroup.com/protocol/v1.0/"
+repository-code: "https://github.com/gatewellgroup/protocol"
+license: CC-BY-4.0
+authors:
+  - name: "Gatewell Group LLC"
+    city: "Los Angeles"
+    region: "California"
+    country: "US"
+    website: "https://gatewellgroup.com"
+keywords:
+  - origin evidence
+  - country of origin
+  - FCC Covered List
+  - equipment authorization
+  - supply chain
+  - bill of materials
+  - Section 889
+  - Build America Buy America
+abstract: >-
+  The Gatewell Protocol for Origin Evidence, Version 1.0, is an open documentation standard for the evidence file behind a claim about where equipment and its components were produced and by whom. It covers the Origin Evidence File, three conformity levels, verification methodology, change control and Annexes A to G, with clause anchors. The Protocol states what a manufacturer's Origin Evidence File contains for a product line, the three conformity levels a buyer can ask for (Documented, Verified, Monitored), the verification methodology an independent examiner follows, change control on the file over the life of the product, and the annexes that carry the officer attestation, the bill-of-materials origin schema, the supplier declaration forms and the change record. Version 1.0 is a public comment draft, revision 3, open for public comment through October 31, 2026. Regime profiles apply the same file to Section 889, Build America, Buy America, and three defense procurement regimes. The text is licensed CC BY 4.0; Annex B in machine-readable form is CC0 1.0.

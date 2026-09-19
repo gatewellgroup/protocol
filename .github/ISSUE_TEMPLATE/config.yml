@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: The comment period page
+    url: https://gatewellgroup.com/protocol-comments
+    about: The questions put for comment, how to comment by email, and every disposition.
+  - name: The published text
+    url: https://gatewellgroup.com/protocol/v1.0/
+    about: The canonical edition with clause anchors.

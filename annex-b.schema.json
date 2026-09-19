@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gatewellgroup.com/protocol/v1.0/annex-b.schema.json",
+  "title": "Gatewell Protocol for Origin Evidence, Version 1.0, Annex B: bill-of-materials origin schema",
+  "description": "Generated from the text of Annex B (1.0 (draft), Revision 3, September 17, 2026). The Protocol text governs. Schema dedicated to the public domain under CC0 1.0.",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "object",
+  "properties": {
+    "protocol_version": {
+      "const": "1.0"
+    },
+    "oef_revision": {
+      "type": "string",
+      "description": "Revision identifier of the Origin Evidence File these records belong to (Annex G)."
+    },
+    "bom_lines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/bom_line"
+      }
+    },
+    "concentration_summary": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/concentration_record"
+      }
+    },
+    "sole_source_register": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sole_source_record"
+      }
+    }
+  },
+  "required": [
+    "protocol_version",
+    "bom_lines"
+  ],
+  "$defs": {
+    "bom_line": {
+      "title": "B.1 BOM line",
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "description": "Manufacturer model number of the finished device. Rule: Must appear in the §4.1 schedule"
+        },
+        "item_ref": {
+          "type": "string",
+          "description": "BOM line reference / internal part number. Rule: Unique within model"
+        },
+        "description": {
+          "type": "string",
+          "description": "Component description. Rule: Plain language"
+        },
+        "mpn": {
+          "type": "string",
+          "description": "Manufacturer part number of the component. Rule: As marked or documented"
+        },
+        "component_mfr": {
+          "type": "string",
+          "description": "Component manufacturer legal name. Rule: Not the distributor"
+        },
+        "mfr_country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "Component manufacturer HQ country. Rule: ISO 3166 alpha-2"
+        },
+        "coo": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "Country of origin of the component as supplied. Rule: ISO 3166 alpha-2; \"MULTI\" prohibited — split lines"
+        },
+        "design_origin": {
+          "type": "string",
+          "pattern": "^([A-Z]{2}|UNKNOWN)$",
+          "description": "Country where the component was designed. Rule: ISO 3166 alpha-2; required for deep-trace lines; \"UNKNOWN\" only with a documented inquiry record"
+        },
+        "supply_channel": {
+          "type": "string",
+          "enum": [
+            "direct",
+            "distributor",
+            "broker"
+          ],
+          "description": "Direct / distributor / broker. Rule: Broker-sourced deep-trace components require Annex C declaration regardless of tier"
+        },
+        "sole_source": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ],
+          "description": "Y if no alternate supplier is qualified at the revision date. Rule: Y requires a B.3 register entry"
+        },
+        "deep_trace": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ],
+          "description": "Y if the component matches Annex D for the category. Rule: Y requires declaration_ref"
+        },
+        "declaration_ref": {
+          "type": "string",
+          "description": "Identifier of the Annex C declaration on file. Rule: Required when deep_trace = Y"
+        },
+        "verified_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date origin was last confirmed. Rule: Within 12 months of revision date for deep-trace lines"
+        }
+      },
+      "required": [
+        "model_id",
+        "item_ref",
+        "description",
+        "mpn",
+        "component_mfr",
+        "mfr_country",
+        "coo",
+        "supply_channel",
+        "sole_source",
+        "deep_trace",
+        "verified_date"
+      ],
+      "additionalProperties": true,
+      "description": "Passive components (resistors, capacitors, standard connectors, fasteners, enclosures) may be aggregated by commodity class with a single coo entry per class where no Annex D match exists.",
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "deep_trace": {
+                "const": "Y"
+              }
+            },
+            "required": [
+              "deep_trace"
+            ]
+          },
+          "then": {
+            "required": [
+              "declaration_ref",
+              "design_origin"
+            ]
+          }
+        }
+      ]
+    },
+    "concentration_record": {
+      "title": "B.2 Supply-chain concentration record",
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "description": "Finished device model. Rule: Must appear in the §4.1 schedule"
+        },
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "Country of origin. Rule: ISO 3166 alpha-2; every coo in B.1 must appear"
+        },
+        "pct_value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of total BOM value originating in the country. Rule: Column sums to 100 ± 0.5 rounding"
+        },
+        "pct_volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of component production volume (unit count) originating in the country. Rule: Column sums to 100 ± 0.5 rounding"
+        },
+        "basis_note": {
+          "type": "string",
+          "description": "Valuation basis (standard cost or actual purchase cost) and the 12-month period used. Rule: Basis held consistent revision over revision; changes documented"
+        },
+        "computed_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of computation. Rule: Equal to or later than the BOM revision it summarizes"
+        }
+      },
+      "required": [
+        "model_id",
+        "country",
+        "pct_value",
+        "pct_volume",
+        "basis_note",
+        "computed_date"
+      ],
+      "additionalProperties": true
+    },
+    "sole_source_record": {
+      "title": "B.3 Sole-source supplier record",
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "description": "The B.1 line concerned. Rule: Every B.1 line with sole_source = Y appears here"
+        },
+        "item_ref": {
+          "type": "string",
+          "description": "The B.1 line concerned. Rule: Every B.1 line with sole_source = Y appears here"
+        },
+        "mpn": {
+          "type": "string",
+          "description": "The B.1 line concerned. Rule: Every B.1 line with sole_source = Y appears here"
+        },
+        "supplier": {
+          "type": "string",
+          "description": "Sole-source supplier legal name"
+        },
+        "supplier_country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "Supplier country. Rule: ISO 3166 alpha-2"
+        },
+        "contingency_ref": {
+          "type": "string",
+          "description": "Document ID of the contingency plan. Rule: Plan must state the course of action if the supplier becomes unavailable: qualified alternate and qualification lead time, buffer-stock policy, or redesign path"
+        },
+        "last_reviewed": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the plan was last reviewed. Rule: At each revision, and on any Part VI trigger affecting the supplier"
+        }
+      },
+      "required": [
+        "model_id",
+        "item_ref",
+        "mpn",
+        "supplier",
+        "supplier_country",
+        "contingency_ref",
+        "last_reviewed"
+      ],
+      "additionalProperties": true
+    }
+  }
+}

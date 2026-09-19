@@ -1,0 +1,48 @@
+name: Comment on the Protocol
+description: A comment on a clause of the public comment draft. It is logged, published with your permission, and answered with a written disposition.
+title: "Comment: clause "
+labels: ["comment-period"]
+body:
+  - type: input
+    id: clause
+    attributes:
+      label: Clause
+      description: The clause number the comment is about (for example 4.2.3 or Annex B).
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Change proposed
+      description: The wording you propose, or the change you ask for.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Why the change is needed and what it fixes.
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Name and affiliation
+      description: Optional if you prefer the comment to be published without them.
+  - type: dropdown
+    id: publish
+    attributes:
+      label: May the comment be published with your name and affiliation?
+      options:
+        - "Yes, with name and affiliation"
+        - "Yes, without name or affiliation"
+        - "No, log it but do not publish it"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I agree that Gatewell Group may incorporate this comment into the Protocol and publish it as permitted above.
+          required: true
