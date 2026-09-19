@@ -7,12 +7,27 @@ date-released: "2026-09-17"
 url: "https://gatewellgroup.com/protocol/v1.0/"
 repository-code: "https://github.com/gatewellgroup/protocol"
 license: CC-BY-4.0
+doi: 10.5281/zenodo.22842570
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22842570
+    description: "This release"
+  - type: doi
+    value: 10.5281/zenodo.22842569
+    description: "All versions"
+  - type: url
+    value: https://zenodo.org/records/22842570
+    description: "Zenodo record"
 authors:
   - name: "Gatewell Group LLC"
     city: "Los Angeles"
     region: "California"
     country: "US"
     website: "https://gatewellgroup.com"
+  - family-names: Tsimerinov
+    given-names: Ilya
+    orcid: "https://orcid.org/0009-0006-2025-1570"
+    affiliation: "Gatewell Group LLC"
 keywords:
   - origin evidence
   - country of origin

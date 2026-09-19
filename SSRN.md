@@ -11,4 +11,4 @@ SSRN indexes into Google Scholar; Zenodo does not. The paper is the PDF in this 
 - **Series:** none; classify under Law, Economics and Regulation
 - **File:** `gatewell-protocol-v1.0-draft-r3.pdf`
 - **Reference URL:** https://gatewellgroup.com/protocol/v1.0/
-- **DOI:** the Zenodo DOI of this release, once minted (record it in the SSRN "references" field and in CITATION.cff)
+- **DOI:** https://doi.org/10.5281/zenodo.22842570 (all versions https://doi.org/10.5281/zenodo.22842569); put it in the SSRN "references" field

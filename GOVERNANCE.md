@@ -10,7 +10,7 @@ The canonical text lives at https://gatewellgroup.com/protocol/v1.0/. This repos
 
 ## The comment period
 
-Write to protocol@gatewellgroup.com. A comment that can be acted on gives the clause number, the change proposed and the reason for it. Give your name and affiliation, and say whether the comment may be published with them. By submitting a comment you agree that Gatewell Group may incorporate it into the Protocol and publish it as you have permitted.
+Write to protocol@gatewellgroup.com. A comment that can be acted on gives the clause number, the change proposed and the reason for it. Give your name and affiliation, and say whether the comment may be published with them. A comment may also be opened as an issue in the Protocol's public repository at github.com/gatewellgroup/protocol , where each question put for comment has its own thread. The same rules apply. By submitting a comment you agree that Gatewell Group may incorporate it into the Protocol and publish it as you have permitted.
 
 Each comment is logged with a number and the date received. Comments are published on this page with the commenter's permission. Every comment receives a written disposition: accepted, accepted in part, or declined with the reason. The disposition table is published with the final text of Version 1.0.
 

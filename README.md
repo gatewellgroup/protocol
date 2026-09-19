@@ -1,5 +1,7 @@
 # The Gatewell Protocol for Origin Evidence, Version 1.0
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22842570.svg)](https://doi.org/10.5281/zenodo.22842570)
+
 Public comment draft, Revision 3. Published 2026-08-07, this revision 2026-09-17. Open for public comment through October 31, 2026.
 
 The Gatewell Protocol for Origin Evidence is an open documentation standard for the evidence file behind a claim about where equipment and its components were produced and by whom. It covers the Origin Evidence File, three conformity levels, verification methodology, change control and Annexes A to G, with clause anchors.
@@ -24,11 +26,11 @@ The canonical edition, with clause anchors, is https://gatewellgroup.com/protoco
 
 Gatewell Group LLC. *The Gatewell Protocol for Origin Evidence, Version 1.0* (public comment draft, revision 3). 2026. https://gatewellgroup.com/protocol/v1.0/
 
-A DOI for each release is minted through Zenodo and recorded in `CITATION.cff` once it exists.
+DOI of this release: https://doi.org/10.5281/zenodo.22842570. All versions: https://doi.org/10.5281/zenodo.22842569. Archived record: https://zenodo.org/records/22842570.
 
 ## How to comment
 
-Write to protocol@gatewellgroup.com. A comment that can be acted on gives the clause number, the change proposed and the reason for it. Give your name and affiliation, and say whether the comment may be published with them. By submitting a comment you agree that Gatewell Group may incorporate it into the Protocol and publish it as you have permitted. A comment may also be opened as an issue in this repository using the comment form; the same rules apply. Each comment is logged with a number and the date received. Comments are published on this page with the commenter's permission. Every comment receives a written disposition: accepted, accepted in part, or declined with the reason. The disposition table is published with the final text of Version 1.0.
+Write to protocol@gatewellgroup.com. A comment that can be acted on gives the clause number, the change proposed and the reason for it. Give your name and affiliation, and say whether the comment may be published with them. A comment may also be opened as an issue in the Protocol's public repository at github.com/gatewellgroup/protocol , where each question put for comment has its own thread. The same rules apply. By submitting a comment you agree that Gatewell Group may incorporate it into the Protocol and publish it as you have permitted. A comment may also be opened as an issue in this repository using the comment form; the same rules apply. Each comment is logged with a number and the date received. Comments are published on this page with the commenter's permission. Every comment receives a written disposition: accepted, accepted in part, or declined with the reason. The disposition table is published with the final text of Version 1.0.
 
 ## Licence
 

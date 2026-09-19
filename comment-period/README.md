@@ -30,7 +30,7 @@ Clause: 1.5, question 4 , Annex D
 
 ## How to comment
 
-Write to protocol@gatewellgroup.com. A comment that can be acted on gives the clause number, the change proposed and the reason for it. Give your name and affiliation, and say whether the comment may be published with them. By submitting a comment you agree that Gatewell Group may incorporate it into the Protocol and publish it as you have permitted.
+Write to protocol@gatewellgroup.com. A comment that can be acted on gives the clause number, the change proposed and the reason for it. Give your name and affiliation, and say whether the comment may be published with them. A comment may also be opened as an issue in the Protocol's public repository at github.com/gatewellgroup/protocol , where each question put for comment has its own thread. The same rules apply. By submitting a comment you agree that Gatewell Group may incorporate it into the Protocol and publish it as you have permitted.
 
 ## What happens to a comment
 
